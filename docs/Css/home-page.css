@@ -173,8 +173,8 @@ aside{
 }
 
 @media (max-width: 430px){
-  .mockup-wrapper img{
-    width: 200px;
+  .mockup-images img{
+    width: 150px;
     height: fit-content;
   }
 }
@@ -221,6 +221,11 @@ aside{
   .custom-container1 .row .mockup-wrapper{ order: 0 !important; position: relative !important; z-index: 1 !important; }
   .mockup-wrapper{ margin-top: 8px !important; }
   .mockup-images{ padding-top: 2rem !important; }
+  .content-box{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 @keyframes Fade {
@@ -261,4 +266,5 @@ aside{
     opacity: 1;
     transform: translateY(0);
   }
+
 }
