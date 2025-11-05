@@ -1,0 +1,56 @@
+main .container,
+ section.container.contact-card{
+	 max-width: 980px;
+	 width: min(980px, 92%);
+	 margin: 0 auto;
+	 padding: 2.25rem 1.75rem;
+	 background: linear-gradient(180deg, rgba(94,147,108,0.03), rgba(255,255,255,0.02));
+ 	 border-radius: 12px;
+ 	 box-shadow: 0 6px 16px rgba(12,15,20,0.06),
+ 	 	 0 18px 42px rgba(12,15,20,0.04);
+ 	 transition: transform 180ms ease, box-shadow 180ms ease;
+ 	 box-sizing: border-box;
+ }
+
+main .container:hover,
+section.container.contact-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 48px rgba(12,15,20,0.12), 0 28px 80px rgba(12,15,20,0.06);
+}
+ footer.site-footer{
+	 margin-top: 5rem;
+ }
+@media (prefers-reduced-motion: reduce){
+  main .container,
+  section.container.contact-card{
+    transition: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 1000px){
+	.contact-card > div:nth-child(2){
+		order: -1;
+		width: 100% !important;
+	}
+	.contact-card > div:nth-child(1){
+		width: 100% !important;
+	}
+	.contact-card img{ display:block; margin: 0 auto; max-width: 420px; width: 100%; height: auto; }
+}
+
+ textarea{
+	height: 200px;
+ }
+ @media (max-width: 750px){
+	 .custom-form{width: 100%;}
+	 footer.site-footer{margin-top: 3rem;}
+ }
+ @media (max-width: 1000px){
+	.contact-card{padding: 1rem;}
+ }
+ main .container a:focus-visible,
+ section.container.contact-card a:focus-visible{
+	 outline: 3px solid rgba(94,147,108,0.12);
+	 outline-offset: 3px;
+ }

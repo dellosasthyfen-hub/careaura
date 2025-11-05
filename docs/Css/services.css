@@ -1,0 +1,92 @@
+html{scroll-behavior: smooth;}
+
+:root{
+  --card-easing: cubic-bezier(.2,.9,.25,1);
+  --card-shadow-light: 0 8px 20px rgba(12,15,20,0.06);
+  --card-shadow-medium: 0 18px 40px rgba(12,15,20,0.09);
+  --card-shadow-strong: 0 30px 70px rgba(12,15,20,0.10);
+}
+
+main{
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem; 
+  padding-top: 2rem;
+}
+.hero{
+  height: fit-content;
+  padding: 10px;
+  background-color: #00b64a;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp .6s ease forwards;
+  border-radius: 10px;
+}
+.hero-media{
+  width: fit-content;
+}
+.hero-media img{
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+}
+.service-wrapper{
+  min-height: 320px;
+}
+.card-footer{
+  background-color: #00b64a;
+}
+.card{
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--card-shadow-light);
+  transition: transform .28s var(--card-easing), box-shadow .28s var(--card-easing);
+  will-change: transform, box-shadow;
+}
+.hero-copy{
+  width: 500px;
+}
+.card-wrapper{
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp .6s ease forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover,
+.card:focus-within{
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-medium);
+}
+
+.card:active{
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-strong);
+}
+@media (prefers-reduced-motion: reduce){
+  .card-wrapper{ animation: none; transform: none; opacity: 1; }
+  .card{ transition: none; }
+}
+
+@media (max-width: 600px){
+  .card-wrapper{ padding: 1rem; }
+  .service-type{ text-align: center; }
+  .card:hover{ transform: translateY(-4px); }
+  .hero{ padding:1rem;}
+}
+
+@media (max-width: 1000px) {
+  main { gap: 1rem; padding: 1rem; }
+  .service-wrapper { min-height: auto; }
+  .card-wrapper { padding: 0.85rem; }
+  .hero-inner{ display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+  .hero-copy{ width: 100%; }
+}
+
+@media (max-width: 420px) {
+  main { gap: 0.5rem; padding-top: 0.6rem; }
+  .card-wrapper { padding: 0.6rem; }
+  .card { border-radius: 10px; }
+}
