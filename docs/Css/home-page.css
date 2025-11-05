@@ -180,6 +180,13 @@ aside{
 }
 
 @media (max-width: 600px){
+  .how-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .features{
+    flex-direction: column;
+  }
   main{
     gap: 0.6rem;
     padding: 0.6rem 0.5rem;
@@ -268,3 +275,4 @@ aside{
   }
 
 }
+
