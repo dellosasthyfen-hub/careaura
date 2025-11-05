@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbzyw59ehMXxMRUmurrONKhQQMoJ3bUgmtUvw2ApFLIpxkhEenai3xBNi0b9MVhPQXvJ/exec"; 
+const scriptURL = "https://script.google.com/macros/s/AKfycbySWuc4Cx7UWHsQl7xf81WYwbmU4n8gKXkvXjBGT2K_0oI6wX9hVMlr1Mn-ohNM0TyN/exec"; 
 
 document.getElementById("sendBtn").addEventListener("click", async (evt) => {
   const nameInput = document.getElementById("name");
@@ -60,3 +60,4 @@ document.getElementById("sendBtn").addEventListener("click", async (evt) => {
     sendBtn.textContent = "Send Message";
   }
 });
+
