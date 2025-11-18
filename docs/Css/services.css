@@ -90,3 +90,38 @@ main{
   .card-wrapper { padding: 0.6rem; }
   .card { border-radius: 10px; }
 }
+
+/* Feature cards in Services page */
+.feature-box {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--card-shadow-light);
+  transition: transform .28s var(--card-easing), box-shadow .28s var(--card-easing);
+  padding-bottom: 1rem;
+  height: auto;
+  min-height: 260px;
+}
+.feature-box.d-flex { align-items: center; }
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-medium);
+}
+.feature-icon .icon-circle{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(0,182,74,0.08);
+  color: #00b64a;
+}
+.feature-icon .fa-solid{ font-size: 1.35rem; }
+.feature-box img{
+  display: block;
+  margin: 0.5rem auto;
+  width: auto;
+  max-width: 70%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.feature-box h5{ font-weight:600; }
+.feature-box .small.text-muted{ color: #65707a; }
