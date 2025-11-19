@@ -15,7 +15,7 @@ header{
   z-index: 1000; 
 }
 header img{
-	height: 50px;
+	height: 60px;
 	width: auto;
 }
 header .logo-wrapper{
@@ -251,3 +251,4 @@ nav.nav a:focus-visible{
   }
 
 }
+
